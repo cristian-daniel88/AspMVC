@@ -8,12 +8,13 @@ namespace AspMVC.Controllers
     {
         public ActionResult Detail () 
         {
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Friday) 
-            {
-                return Redirect("/");
-            }
-
-            return Content("Content result ! jjaja");
+        ViewBag.Books = new string[]
+        {
+        "clasicc",
+        "history",
+        "music"
+        };
+           return  View();
             
         }
 
